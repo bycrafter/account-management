@@ -17,12 +17,13 @@ import java.util.List;
 public class UserManagementGrpcService extends UserManagementServiceGrpc.UserManagementServiceImplBase {
 
     private final UserManagementService userManagementService;
+    private final UserGrpcMapper mapper;
 
     @Override
     public void addUser(UserRequest request, StreamObserver<UserResponse> responseObserver) {
-        UserAddModel userAddModel = UserGrpcMapper.INSTANCE.toUserAddModel(request);
+        UserAddModel userAddModel = mapper.toUserAddModel(request);
         var user = userManagementService.addUser(userAddModel);
-        var response = UserGrpcMapper.INSTANCE.toUserDetailResponse(user);
+        var response = mapper.toUserDetailResponse(user);
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
@@ -30,7 +31,7 @@ public class UserManagementGrpcService extends UserManagementServiceGrpc.UserMan
     @Override
     public void getUsers(Empty request, StreamObserver<UserListResponse> responseObserver) {
         List<UserModel> users = userManagementService.getUsers();
-        List<UserResponse> userDetailResponseList = UserGrpcMapper.INSTANCE.toUserListResponse(users);
+        List<UserResponse> userDetailResponseList = mapper.toUserListResponse(users);
         responseObserver.onNext(UserListResponse.newBuilder().addAllUserDetail(userDetailResponseList).build());
         responseObserver.onCompleted();
     }
@@ -38,16 +39,16 @@ public class UserManagementGrpcService extends UserManagementServiceGrpc.UserMan
     @Override
     public void getUser(UserDetailRequest request, StreamObserver<UserResponse> responseObserver) {
         UserModel user = userManagementService.getUser(request.getId());
-        UserResponse response = UserGrpcMapper.INSTANCE.toUserDetailResponse(user);
+        UserResponse response = mapper.toUserDetailResponse(user);
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
 
     @Override
     public void updateUser(UpdateUserRequest request, StreamObserver<UserResponse> responseObserver) {
-        UserModel userModel = UserGrpcMapper.INSTANCE.toUserModel(request);
+        UserModel userModel = mapper.toUserModel(request);
         var user = userManagementService.updateUser(userModel);
-        var response = UserGrpcMapper.INSTANCE.toUserDetailResponse(user);
+        var response = mapper.toUserDetailResponse(user);
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

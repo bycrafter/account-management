@@ -14,7 +14,7 @@
 *.lombok.config
 
 # Maven specific files
-/target/
+target
 /out/
 /mvnw
 /mvnw.cmd
