@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user-management-business-application
+    name: user-management
   datasource:
     password: password
     url: jdbc:postgresql://localhost:5432/amigoscode
