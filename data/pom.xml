@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.bycrafter.core</groupId>
-        <artifactId>user-management-bom</artifactId>
+        <artifactId>account-management-bom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../bom</relativePath>
     </parent>
 
     <packaging>jar</packaging>
-    <artifactId>user-management-data</artifactId>
-    <name>user-management-data</name>
+    <artifactId>account-management-data</artifactId>
+    <name>account-management-data</name>
 
     <dependencies>
         <dependency>
