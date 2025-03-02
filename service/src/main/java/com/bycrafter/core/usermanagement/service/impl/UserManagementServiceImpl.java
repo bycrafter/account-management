@@ -1,4 +1,4 @@
-package com.bycrafter.core.usermanagement.service.contact.impl;
+package com.bycrafter.core.usermanagement.service.impl;
 
 import com.bycrafter.core.usermanagement.data.entity.UserEntity;
 import com.bycrafter.core.usermanagement.data.reposityory.UserRepository;

@@ -5,18 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.bycrafter.core</groupId>
-        <artifactId>user-management-bom</artifactId>
+        <artifactId>account-management-bom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../bom</relativePath>
     </parent>
 
-    <name>user-management-service</name>
-    <artifactId>user-management-service</artifactId>
+    <name>account-management-service</name>
+    <artifactId>account-management-service</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.bycrafter.core</groupId>
-            <artifactId>user-management-data</artifactId>
+            <artifactId>account-management-data</artifactId>
         </dependency>
     </dependencies>
 </project>
