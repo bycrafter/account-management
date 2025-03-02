@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user-management
+    name: account-management
   datasource:
     password: password
     url: jdbc:postgresql://localhost:5432/amigoscode
@@ -16,6 +16,12 @@ spring:
 grpc:
   server:
     port: 6565
+    security:
+      enabled: true
+      key-store: classpath:keystore.p12
+      key-store-password: password
+      key-store-format: PKCS12
+
 
 eureka:
   instance:

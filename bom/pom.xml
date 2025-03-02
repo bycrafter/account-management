@@ -17,6 +17,7 @@
 
     <properties>
         <project.version>0.0.1-SNAPSHOT</project.version>
+        <account-management-grpc-contract.version>0.0.1-SNAPSHOT</account-management-grpc-contract.version>
     </properties>
 
     <dependencyManagement>
@@ -47,8 +48,8 @@
 
             <dependency>
                 <groupId>com.bycrafter.core</groupId>
-                <artifactId>user-management-grpc-contract</artifactId>
-                <version>${project.version}</version>
+                <artifactId>account-management-grpc-contract</artifactId>
+                <version>${account-management-grpc-contract.version}</version>
             </dependency>
 
         </dependencies>

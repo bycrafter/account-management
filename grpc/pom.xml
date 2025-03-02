@@ -16,8 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.bycrafter.core</groupId>
-            <artifactId>user-management-grpc-contract</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>account-management-grpc-contract</artifactId>
         </dependency>
         <dependency>
             <groupId>com.bycrafter.core</groupId>
